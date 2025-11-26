@@ -13,7 +13,7 @@ import com.thealgorithms.devutils.searches.MatrixSearchAlgorithm;
  * In this two pointers are taken, the first points to the 0th row and the second one points to end
  * column, and then the element corresponding to the pointers placed in the array is compared with
  * the target that either its equal, greater or smaller than the target. If the element is equal to
- * the target, the co-ordinates of that element is returned i.e. an array of the two pointers will
+ * the target, the coordinates of that element is returned i.e. an array of the two pointers will
  * be returned, else if the target is greater than corresponding element then the pointer pointing
  * to the 0th row will be incremented by 1, else if the target is lesser than the corresponding
  * element then the pointer pointing to the end column will be decremented by 1. And if the element
@@ -29,7 +29,7 @@ public class RowColumnWiseSorted2dArrayBinarySearch implements MatrixSearchAlgor
 
     public static <T extends Comparable<T>> int[] search(T[][] matrix, T target) {
         int rowPointer = 0; // The pointer at 0th row
-        int colPointer = matrix.length - 1; // The pointer at end column
+        int colPointer = matrix[0].length - 1; // The pointer at end column
 
         while (rowPointer < matrix.length && colPointer >= 0) {
             int comp = target.compareTo(matrix[rowPointer][colPointer]);

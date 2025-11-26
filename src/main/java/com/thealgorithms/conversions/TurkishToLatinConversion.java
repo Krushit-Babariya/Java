@@ -1,7 +1,5 @@
 package com.thealgorithms.conversions;
 
-import java.util.Scanner;
-
 /**
  * Converts turkish character to latin character
  *
@@ -12,22 +10,13 @@ public final class TurkishToLatinConversion {
     }
 
     /**
-     * Main method
-     *
-     * @param args Command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Input the string: ");
-        String b = sc.next();
-        System.out.println("Converted: " + convertTurkishToLatin(b));
-        sc.close();
-    }
-
-    /**
      * This method converts a turkish character to latin character.
+     * Steps:
+     * 1. Define turkish characters and their corresponding latin characters
+     * 2. Replace all turkish characters with their corresponding latin characters
+     * 3. Return the converted string
      *
-     * @param param String paramter
+     * @param param String parameter
      * @return String
      */
     public static String convertTurkishToLatin(String param) {
